@@ -1,0 +1,394 @@
+{
+  "sma": {
+    "opis": "Simple Moving Average, prosta średnia krocząca.",
+    "argumenty": {
+      "close": "ceny zamknięcia",
+      "okres": "długość okna"
+    },
+    "wynik": "średnia dla każdego pełnego okna, rozmiar: size - okres + 1"
+  },
+
+  "ema": {
+    "opis": "Exponential Moving Average, wykładnicza średnia krocząca.",
+    "argumenty": {
+      "close": "ceny zamknięcia",
+      "okres": "okres wygładzania"
+    },
+    "wynik": "wykładnicza średnia krocząca dla całej tablicy, rozmiar: size"
+  },
+
+  "wma": {
+    "opis": "Weighted Moving Average, ważona średnia krocząca.",
+    "argumenty": {
+      "close": "ceny zamknięcia",
+      "okres": "długość okna"
+    },
+    "wynik": "ważona średnia dla każdego pełnego okna, rozmiar: size - okres + 1"
+  },
+
+  "rsi": {
+    "opis": "Relative Strength Index, wskaźnik siły względnej.",
+    "argumenty": {
+      "close": "ceny zamknięcia",
+      "okres": "okres używany do obliczenia RSI"
+    },
+    "wynik": "wartości RSI, rozmiar: size - okres + 1"
+  },
+
+  "roc": {
+    "opis": "Rate of Change, procentowa zmiana wartości względem wartości sprzed określonej liczby okresów.",
+    "argumenty": {
+      "close": "ceny zamknięcia",
+      "okres": "liczba okresów używana do porównania"
+    },
+    "wynik": "procentowa zmiana względem wartości sprzed okresu, rozmiar: size - okres"
+  },
+
+  "momentum": {
+    "opis": "Momentum, różnica pomiędzy wartością aktualną i wartością sprzed określonej liczby okresów.",
+    "argumenty": {
+      "close": "ceny zamknięcia",
+      "okres": "liczba okresów używana do porównania"
+    },
+    "wynik": "różnica wartości, rozmiar: size - okres"
+  },
+
+  "variance": {
+    "opis": "Wariancja populacyjna wartości w ruchomym oknie.",
+    "argumenty": {
+      "close": "wartości wejściowe",
+      "okres": "długość okna"
+    },
+    "wynik": "wariancja dla każdego okna, rozmiar: size - okres + 1"
+  },
+
+  "stddev": {
+    "opis": "Odchylenie standardowe populacyjne wartości w ruchomym oknie.",
+    "argumenty": {
+      "close": "wartości wejściowe",
+      "okres": "długość okna"
+    },
+    "wynik": "odchylenie standardowe dla każdego okna, rozmiar: size - okres + 1"
+  },
+
+  "bollinger": {
+    "opis": "Bollinger Bands, wstęgi Bollingera określające średnią oraz zakres zmienności ceny.",
+    "argumenty": {
+      "close": "ceny zamknięcia",
+      "okres": "długość okna",
+      "mnoznik": "mnożnik odchylenia standardowego"
+    },
+    "wynik": {
+      "upper": "górna wstęga",
+      "middle": "średnia krocząca",
+      "lower": "dolna wstęga",
+      "rozmiar": "size - okres + 1"
+    }
+  },
+
+  "atr": {
+    "opis": "Average True Range, wskaźnik zmienności uwzględniający zakres rzeczywisty świec.",
+    "argumenty": {
+      "high": "najwyższe ceny świec",
+      "low": "najniższe ceny świec",
+      "close": "ceny zamknięcia",
+      "okres": "okres używany do obliczenia ATR"
+    },
+    "wynik": "wartości ATR, rozmiar: size - okres + 1"
+  },
+
+  "stochastic": {
+    "opis": "Stochastic Oscillator, wskaźnik położenia ceny zamknięcia względem zakresu cenowego.",
+    "argumenty": {
+      "high": "najwyższe ceny świec",
+      "low": "najniższe ceny świec",
+      "close": "ceny zamknięcia",
+      "okres": "długość okna"
+    },
+    "wynik": "wartości %K, rozmiar: size - okres + 1",
+    "bledy": {
+      "4": "najwyższa i najniższa wartość w oknie są równe"
+    }
+  },
+
+  "change": {
+    "opis": "Zmiana pomiędzy kolejnymi wartościami.",
+    "argumenty": {
+      "close": "wartości wejściowe"
+    },
+    "wynik": "różnica close[i] - close[i-1], rozmiar: size - 1"
+  },
+
+  "macd": {
+    "opis": "Moving Average Convergence Divergence, wskaźnik oparty na różnicy szybkiej i wolnej EMA.",
+    "argumenty": {
+      "close": "ceny zamknięcia",
+      "szybki": "okres szybkiej EMA",
+      "wolny": "okres wolnej EMA",
+      "sygnal": "okres EMA linii sygnałowej"
+    },
+    "wynik": {
+      "macd": "różnica szybkiej i wolnej EMA",
+      "signal": "EMA linii MACD",
+      "histogram": "różnica pomiędzy MACD i linią sygnałową",
+      "rozmiar": "size"
+    }
+  },
+
+  "williams": {
+    "opis": "Williams %R, oscylator określający położenie ceny zamknięcia względem zakresu cenowego.",
+    "argumenty": {
+      "high": "najwyższe ceny świec",
+      "low": "najniższe ceny świec",
+      "close": "ceny zamknięcia",
+      "okres": "długość okna"
+    },
+    "wynik": "wartości Williams %R, rozmiar: size - okres + 1",
+    "bledy": {
+      "4": "najwyższa i najniższa wartość w oknie są równe"
+    }
+  },
+
+  "adx": {
+    "opis": "Average Directional Index, wskaźnik siły trendu.",
+    "argumenty": {
+      "high": "najwyższe ceny świec",
+      "low": "najniższe ceny świec",
+      "close": "ceny zamknięcia",
+      "okres": "okres używany do obliczenia ADX"
+    },
+    "wynik": "wartości ADX, rozmiar: size - 2 * okres + 1",
+    "bledy": {
+      "4": "nie można obliczyć wskaźnika z powodu zerowego mianownika"
+    }
+  },
+
+  "cci": {
+    "opis": "Commodity Channel Index, wskaźnik mierzący odchylenie ceny od jej średniej.",
+    "argumenty": {
+      "high": "najwyższe ceny świec",
+      "low": "najniższe ceny świec",
+      "close": "ceny zamknięcia",
+      "okres": "długość okresu"
+    },
+    "wynik": "wartości CCI, rozmiar: size - okres + 1",
+    "bledy": {
+      "4": "odchylenie od średniej w oknie jest równe zero"
+    }
+  },
+
+  "obv": {
+    "opis": "On-Balance Volume, skumulowany wskaźnik wykorzystujący kierunek zmiany ceny i wolumen.",
+    "argumenty": {
+      "close": "ceny zamknięcia",
+      "volume": "wolumen obrotu"
+    },
+    "wynik": "skumulowany wolumen zależny od kierunku zmiany ceny, rozmiar: size"
+  },
+
+  "vwap": {
+    "opis": "Volume Weighted Average Price, średnia cena ważona wolumenem.",
+    "argumenty": {
+      "high": "najwyższe ceny świec",
+      "low": "najniższe ceny świec",
+      "close": "ceny zamknięcia",
+      "volume": "wolumen obrotu"
+    },
+    "wynik": "skumulowana cena średnia ważona wolumenem, rozmiar: size"
+  },
+
+  "mfi": {
+    "opis": "Money Flow Index, wskaźnik przepływu pieniądza wykorzystujący cenę i wolumen.",
+    "argumenty": {
+      "high": "najwyższe ceny świec",
+      "low": "najniższe ceny świec",
+      "close": "ceny zamknięcia",
+      "volume": "wolumen obrotu",
+      "okres": "długość okresu"
+    },
+    "wynik": "wartości MFI, rozmiar: size - okres"
+  },
+
+  "psar": {
+    "opis": "Parabolic SAR, wskaźnik trendu wykorzystujący punkty zatrzymania i odwrócenia.",
+    "argumenty": {
+      "high": "najwyższe ceny świec",
+      "low": "najniższe ceny świec",
+      "step": "krok współczynnika przyspieszenia",
+      "maximum": "maksymalna wartość współczynnika przyspieszenia"
+    },
+    "wynik": "wartości Parabolic SAR, rozmiar: size"
+  },
+
+  "ichimoku": {
+    "opis": "Ichimoku Cloud, system wskaźników opisujący trend, poziomy wsparcia i oporu oraz dynamikę rynku.",
+    "argumenty": {
+      "high": "najwyższe ceny świec",
+      "low": "najniższe ceny świec",
+      "close": "ceny zamknięcia",
+      "tenkan": "okres Tenkan-sen",
+      "kijun": "okres Kijun-sen",
+      "senkou": "okres Senkou Span B",
+      "przesuniecie": "przesunięcie elementów chmury"
+    },
+    "wynik": {
+      "tenkan": "Tenkan-sen",
+      "kijun": "Kijun-sen",
+      "senkou_a": "Senkou Span A",
+      "senkou_b": "Senkou Span B",
+      "chikou": "Chikou Span",
+      "rozmiar": "size"
+    }
+  },
+
+  "aroon": {
+    "opis": "Aroon, wskaźnik określający siłę i kierunek trendu na podstawie czasu od ostatniego maksimum i minimum.",
+    "argumenty": {
+      "high": "najwyższe ceny świec",
+      "low": "najniższe ceny świec",
+      "okres": "długość okna"
+    },
+    "wynik": {
+      "up": "Aroon Up, rozmiar: size - okres + 1",
+      "down": "Aroon Down, rozmiar: size - okres + 1"
+    }
+  },
+
+  "keltner": {
+    "opis": "Keltner Channel, kanał zmienności oparty na EMA i ATR.",
+    "argumenty": {
+      "high": "najwyższe ceny świec",
+      "low": "najniższe ceny świec",
+      "close": "ceny zamknięcia",
+      "okres": "okres EMA i ATR",
+      "mnoznik": "mnożnik ATR"
+    },
+    "wynik": {
+      "upper": "górna granica kanału",
+      "middle": "środkowa linia kanału, EMA",
+      "lower": "dolna granica kanału",
+      "rozmiar": "size - okres + 1"
+    }
+  },
+
+  "donchian": {
+    "opis": "Donchian Channel, kanał wyznaczający najwyższą i najniższą cenę w ruchomym oknie.",
+    "argumenty": {
+      "high": "najwyższe ceny świec",
+      "low": "najniższe ceny świec",
+      "okres": "długość okna"
+    },
+    "wynik": {
+      "upper": "najwyższa wartość high w oknie",
+      "middle": "średnia górnej i dolnej granicy",
+      "lower": "najniższa wartość low w oknie",
+      "rozmiar": "size - okres + 1"
+    }
+  },
+
+  "cmf": {
+    "opis": "Chaikin Money Flow, wskaźnik przepływu kapitału wykorzystujący cenę i wolumen.",
+    "argumenty": {
+      "high": "najwyższe ceny świec",
+      "low": "najniższe ceny świec",
+      "close": "ceny zamknięcia",
+      "volume": "wolumen obrotu",
+      "okres": "długość okna"
+    },
+    "wynik": "wartości CMF, rozmiar: size - okres + 1",
+    "bledy": {
+      "4": "najwyższa i najniższa cena w świecy są równe"
+    }
+  },
+
+  "williamsad": {
+    "opis": "Williams Accumulation/Distribution, wskaźnik skumulowanej akumulacji i dystrybucji.",
+    "argumenty": {
+      "high": "najwyższe ceny świec",
+      "low": "najniższe ceny świec",
+      "close": "ceny zamknięcia"
+    },
+    "wynik": "skumulowana wartość akumulacji/dystrybucji, rozmiar: size"
+  },
+
+  "trix": {
+    "opis": "TRIX, potrójnie wygładzony wskaźnik zmian procentowych.",
+    "argumenty": {
+      "close": "ceny zamknięcia",
+      "okres": "okres wygładzania"
+    },
+    "wynik": "wartości TRIX, rozmiar: size - 1"
+  },
+
+  "forceindex": {
+    "opis": "Force Index, wskaźnik siły ruchu ceny wykorzystujący zmianę ceny i wolumen.",
+    "argumenty": {
+      "close": "ceny zamknięcia",
+      "volume": "wolumen obrotu"
+    },
+    "wynik": "wartości Force Index, rozmiar: size - 1"
+  },
+
+  "ultimateoscillator": {
+    "opis": "Ultimate Oscillator, oscylator momentum wykorzystujący trzy różne okresy.",
+    "argumenty": {
+      "high": "najwyższe ceny świec",
+      "low": "najniższe ceny świec",
+      "close": "ceny zamknięcia",
+      "okres1": "pierwszy okres",
+      "okres2": "drugi okres",
+      "okres3": "trzeci okres"
+    },
+    "wynik": "wartości Ultimate Oscillator, rozmiar: size - max(okres1, okres2, okres3)"
+  },
+
+  "awesomeoscillator": {
+    "opis": "Awesome Oscillator, oscylator momentum oparty na różnicy średnich z dwóch okresów.",
+    "argumenty": {
+      "high": "najwyższe ceny świec",
+      "low": "najniższe ceny świec",
+      "okres1": "krótszy okres",
+      "okres2": "dłuższy okres"
+    },
+    "wynik": "wartości Awesome Oscillator, rozmiar: size - max(okres1, okres2) + 1"
+  },
+
+  "eom": {
+    "opis": "Ease of Movement, wskaźnik mierzący łatwość przemieszczania się ceny przy uwzględnieniu wolumenu.",
+    "argumenty": {
+      "high": "najwyższe ceny świec",
+      "low": "najniższe ceny świec",
+      "volume": "wolumen obrotu"
+    },
+    "wynik": "wartości Ease of Movement, rozmiar: size - 1"
+  },
+
+  "kama": {
+    "opis": "Kaufman's Adaptive Moving Average, adaptacyjna średnia krocząca dostosowująca wygładzanie do zmienności rynku.",
+    "argumenty": {
+      "close": "ceny zamknięcia",
+      "okres": "okres efektywności ruchu",
+      "fast": "szybki okres wygładzania",
+      "slow": "wolny okres wygładzania"
+    },
+    "wynik": "adaptacyjna średnia krocząca, rozmiar: size - okres"
+  },
+
+  "hma": {
+    "opis": "Hull Moving Average, wygładzona średnia krocząca wykorzystująca ważoną średnią i pierwiastek z okresu.",
+    "argumenty": {
+      "close": "ceny zamknięcia",
+      "okres": "okres HMA"
+    },
+    "wynik": "wartości HMA, rozmiar: size - okres - int(sqrt(okres)) + 2"
+  },
+
+  "dpo": {
+    "opis": "Detrended Price Oscillator, oscylator usuwający część trendu w celu analizy cykli cenowych.",
+    "argumenty": {
+      "close": "ceny zamknięcia",
+      "okres": "okres używany do obliczenia DPO"
+    },
+    "wynik": "wartości DPO, rozmiar: size - okres / 2"
+  }
+}

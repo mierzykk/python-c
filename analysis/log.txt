@@ -1,0 +1,16 @@
+rok: 2026 miesiac: 9 dzien: 30 godzina: 17 minuta: 38 sekunda: 18 funkcja: s kod: s
+rok: 2026 miesiac: 9 dzien: 30 godzina: 17 minuta: 38 sekunda: 22 funkcja: s kod: s
+rok: 2026 miesiac: 9 dzien: 30 godzina: 17 minuta: 38 sekunda: 23 funkcja: s kod: s
+rok: 2026 miesiac: 9 dzien: 30 godzina: 17 minuta: 38 sekunda: 24 funkcja: s kod: s
+rok: 2026 miesiac: 9 dzien: 30 godzina: 17 minuta: 38 sekunda: 24 funkcja: s kod: s
+rok: 2026 miesiac: 9 dzien: 30 godzina: 18 minuta: 26 sekunda: 25 funkcja: sma kod: 2 message: okres jest wiekszy niz dane wejsciowe
+rok: 2026 miesiac: 9 dzien: 30 godzina: 18 minuta: 26 sekunda: 25 funkcja: sma kod: 2 message: okres jest wiêkszy ni¿ rozmiar danych wejœciowych.
+rok: 2026 miesiac: 9 dzien: 30 godzina: 18 minuta: 26 sekunda: 25 funkcja: ema kod: 1 message: okres albo size jest mniejszy lub równy zero.
+rok: 2026 miesiac: 9 dzien: 30 godzina: 18 minuta: 26 sekunda: 25 funkcja: sma kod: 2 message: okres jest wiekszy niz dane wejsciowe
+rok: 2026 miesiac: 9 dzien: 30 godzina: 18 minuta: 26 sekunda: 25 funkcja: sma kod: 2 message: okres jest wiêkszy ni¿ rozmiar danych wejœciowych.
+rok: 2026 miesiac: 9 dzien: 30 godzina: 18 minuta: 26 sekunda: 41 funkcja: sma kod: 2 message: okres jest wiekszy niz dane wejsciowe
+rok: 2026 miesiac: 9 dzien: 30 godzina: 18 minuta: 26 sekunda: 41 funkcja: ema kod: 1 message: okres albo size jest mniejszy lub równy zero.
+rok: 2026 miesiac: 9 dzien: 30 godzina: 18 minuta: 26 sekunda: 41 funkcja: sma kod: 2 message: okres jest wiekszy niz dane wejsciowe
+rok: 2026 miesiac: 9 dzien: 30 godzina: 18 minuta: 26 sekunda: 41 funkcja: sma kod: 2 message: okres jest wiêkszy ni¿ rozmiar danych wejœciowych.
+rok: 2026 miesiac: 9 dzien: 30 godzina: 18 minuta: 31 sekunda: 0 funkcja: ema kod: 1 message: okres albo size jest mniejszy lub równy zero.
+rok: 2026 miesiac: 9 dzien: 30 godzina: 18 minuta: 31 sekunda: 0 funkcja: sma kod: 2 message: okres jest wiêkszy ni¿ rozmiar danych wejœciowych.
